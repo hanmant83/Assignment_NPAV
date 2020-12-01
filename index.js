@@ -8,7 +8,6 @@ mkdirp.sync(outputDir);
 const readInput = () => {
 let inputFileName = 'input.txt';    
 const inputFile = `${inputDir}/${inputFileName}`;
-console.log(inputFile);
 let inputObjArray=[];
 fs.readFile(inputFile,'utf8',(err,data)=>{
     if (err) throw err;
@@ -38,7 +37,6 @@ for (const [key, value] of Object.entries(result)) {
         outputString +=  `${key}: ${value}\n`
     }
   }
-  console.log(outputString)
 let outputFileName = 'output.txt';    
 const outputFile = `${outputDir}/${outputFileName}`;
 fs.writeFile(outputFile, outputString, 'utf8',(err) => {
